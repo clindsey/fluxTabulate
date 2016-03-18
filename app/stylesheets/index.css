@@ -1,0 +1,35 @@
+body {
+  padding: 20px 0;
+}
+
+svg {
+  margin: 20px auto 0;
+  display: block;
+}
+
+.container {
+  min-width: 510px;
+}
+
+.nav-tabs {
+  margin-top: 20px;
+}
+
+.chart__text {
+  letter-spacing: 2px;
+  fill: #fff;
+  font-family: sans-serif;
+  text-shadow: 0 0 3px #000;
+}
+
+.table-hover .btn-link {
+  visibility: hidden;
+}
+
+.table-hover tr:hover .btn-link {
+  visibility: visible;
+}
+
+.arc {
+  stroke: #fff;
+}
