@@ -2,6 +2,7 @@ import React from 'react';
 import DataInsert from './DataInsert';
 import UniqueList from './tables/UniqueList';
 import AggregateList from './tables/AggregateList';
+import AsterPlot from './charts/AsterPlot';
 import BarChart from './charts/BarChart';
 import PieChart from './charts/PieChart';
 import DataActions from '../actions/Data';
@@ -56,6 +57,12 @@ export default class TabulateApp extends React.Component {
               <li className="active">
                 <a
                     data-toggle="tab"
+                    href="#aster-series"
+                >{'Aster Series'}</a>
+              </li>
+              <li>
+                <a
+                    data-toggle="tab"
                     href="#bar"
                 >{'Bar Chart'}</a>
               </li>
@@ -69,6 +76,16 @@ export default class TabulateApp extends React.Component {
             <div className="tab-content">
               <div
                   className="tab-pane active"
+                  id="aster-series"
+              >
+                <AsterPlot
+                    allData={this.state.allData}
+                    height={chartHeight}
+                    width={chartWidth}
+                />
+              </div>
+              <div
+                  className="tab-pane"
                   id="bar"
               >
                 <BarChart
