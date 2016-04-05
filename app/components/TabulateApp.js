@@ -33,7 +33,7 @@ export default class TabulateApp extends React.Component {
 
   render () {
     const chartWidth = 480;
-    const chartHeight = 120;
+    const chartHeight = 320;
     return (
       <div>
         <div className="row">
