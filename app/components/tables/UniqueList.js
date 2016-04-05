@@ -17,7 +17,7 @@ class UniqueList extends React.Component {
             value={datum}
           />
         );
-    });
+    }).reverse();
     return (
       <table className="table table-condensed table-hover">
         <thead>
