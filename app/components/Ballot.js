@@ -8,19 +8,40 @@ export default class Ballot extends React.Component {
 
   render () {
     return (
-      <div>
-        <button
-            className="btn btn-primary"
-            onClick={this._onClick}
-        >{'Flash'}</button>
-        <button
-            className="btn btn-primary"
-            onClick={this._onClick}
-        >{'Batman'}</button>
-        <button
-            className="btn btn-primary"
-            onClick={this._onClick}
-        >{'Superman'}</button>
+      <div
+          className="btn-group"
+          role="group"
+      >
+        <div
+            className="btn-group"
+            role="group"
+        >
+          <button
+              type="button"
+              className="btn btn-primary"
+              onClick={this._onClick}
+          >{'Iron Man'}</button>
+        </div>
+        <div
+            className="btn-group"
+            role="group"
+        >
+          <button
+              type="button"
+              className="btn btn-primary"
+              onClick={this._onClick}
+          >{'Black Panther'}</button>
+        </div>
+        <div
+            className="btn-group"
+            role="group"
+        >
+          <button
+              type="button"
+              className="btn btn-primary"
+              onClick={this._onClick}
+          >{'The Hulk'}</button>
+        </div>
       </div>
     );
   }
