@@ -33,3 +33,17 @@ svg {
 .arc {
   stroke: #fff;
 }
+
+/* begin aster plot */
+.aster-count {
+  font-size: 1.618em;
+}
+#aster-series .arc .aster-label {
+  opacity: 1;
+  transition: opacity 0.15s;
+  cursor: pointer;
+}
+#aster-series .arc:not(:hover) .aster-label {
+  opacity: 0;
+}
+/* end aster plot */

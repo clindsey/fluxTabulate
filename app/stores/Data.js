@@ -4,40 +4,40 @@ import DataConstants from '../constants/Data';
 
 const CHANGE_EVENT = 'change';
 
-let _data = {};
+let _data = [];
 let _aggregates = {};
 
 const add = (datum) => {
-  const id = (+(new Date()) + ~~(Math.random() * 999999)).toString(36);
-  _data[id] = {
-    value: datum
-  };
+
+  // record the order of entry
+  _data.push(datum);
+
   const count = _aggregates[datum] || 0;
   _aggregates[datum] = count + 1;
 };
 
 const clear = () => {
-  _data = {};
+  _data = [];
   _aggregates = {};
 };
 
 const remove = (id) => {
-  const value = _data[id].value;
+  const value = _data[id];
   const count = _aggregates[value];
   if (count > 1) {
     _aggregates[value] = count - 1;
   } else {
     delete _aggregates[value];
   }
-  delete _data[id];
+  // preserve the order of entry
+  _data.splice(id, 1);
 };
 
 const removeAll = (value) => {
-  for (const id in _data) {
-    if (_data[id].value === value) {
-      remove(id);
-    }
-  }
+
+  _data = _data.filter(
+    datum => value !== datum
+  );
   delete _aggregates[value];
 };
 
